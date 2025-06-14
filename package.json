@@ -1,0 +1,15 @@
+{
+  "name": "abhijeet_portfolio",
+  "version": "1.0.0",
+  "description": "This repository contains the portfolio site for **Abhijeet Pawar**. The site showcases work experience, projects and certifications in cybersecurity.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node server.js --test",
+    "start": "node server.js",
+    "build": "node build.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
