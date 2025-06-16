@@ -1,49 +1,49 @@
-    <section id="experience" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Work Experience</h2>
-            <div class="relative wrap overflow-hidden">
-                <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gradient-pop shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
-                    </div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-pink-400 text-sm">MAY 2024-DEC 2024</h3>
-                        <h3 class="font-bold text-white text-lg">Security Detection &amp; Response Engineer Intern</h3>
-                        <p class="text-sm font-medium text-gray-400">Circle Internet Group</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-2">
-                            Investigated 350+ security incidents, authored 25+ advanced detection rules, and led proactive threat hunts.
-                        </p>
-                    </div>
+    <section id="experience" class="py-20" data-aos="fade-right">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="section-heading text-white mb-8">Work Experience</h2>
+            <div class="space-y-12">
+                <div class="glass-card rounded-lg shadow-xl px-6 py-6" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="font-bold text-pink-400 text-sm">MAY 2024-DEC 2024</h3>
+                    <h3 class="font-bold text-white text-xl mt-1">Security Detection & Response Engineer Intern</h3>
+                    <p class="text-sm font-medium text-gray-400">Circle Internet Group</p>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Investigated 350+ security incidents (phishing, cloud anomalies, endpoint intrusions) as on-call call lead, leveraging Panther SIEM and SentinelOne EDR to identify root causes, coordinate containment, and deliver incident reports.</li>
+                        <li>Triaged and remediated AWS cloud security misconfigurations and anomalies including EC2 instances communicating with malicious IPs, publicly exposed S3 buckets and implemented CloudTrail anomaly alerts.</li>
+                        <li>Authored 25+ advanced detection rules for critical threats (e.g., OnePassword login anomalies, Okta admin misuse, Cloud anomalies), uncovering 8 previously unknown threat vectors and reducing false positives by 10%.</li>
+                        <li>Led proactive threat-hunting for the Polyfill supply chain attack, identifying 30 vulnerabilities across 10 repositories and driving remediation efforts that averted a potential compromise.</li>
+                        <li>Secured 1,550+ Google OAuth apps and Chrome extensions, blocking 80+ unauthorized apps and reducing the attack surface by 5% via a security approval process. Built a risk rating tool to automate reviews, saving $50K by avoiding third-party spend.</li>
+                        <li>Developed a Python-based "Sigma Converter" to automate 100+ Sigma rule conversions for Panther SIEM, slashing deployment time by 50% and expanding threat detection coverage by 15%.</li>
+                    </ul>
                 </div>
-                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gradient-pop shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-                    </div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-pink-400 text-sm">JULY 2021-JUNE 2023</h3>
-                        <h3 class="font-bold text-white text-lg">Cyber Security Analyst</h3>
-                        <p class="text-sm font-medium text-gray-400">Atos</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-2">
-                            Triaged 25+ daily alerts, reducing MTTD by 35%. Created 20+ IR playbooks and automated workflows, accelerating response times by 30%.
-                        </p>
-                    </div>
+                <div class="glass-card rounded-lg shadow-xl px-6 py-6" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="font-bold text-pink-400 text-sm">JULY 2021-JUNE 2023</h3>
+                    <h3 class="font-bold text-white text-xl mt-1">Cyber Security Analyst</h3>
+                    <p class="text-sm font-medium text-gray-400">Atos</p>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Triaged and analyzed 25+ security alerts daily (Splunk, Microsoft Defender, Snort) in a 24/7 SOC environment, reducing mean time to detection (MTTD) by 35% and protecting 950+ endpoints across enterprise systems.</li>
+                        <li>Assisted on full-lifecycle incident response for major security incidents, collaborating with DevOps and IT teams to remediate lateral movement, cloud misconfigurations, and insider threats.</li>
+                        <li>Configured and tuned Cloudflare Web Application Firewall (WAF) rules to block 80+ malicious domains, enhancing web layer protection and reducing inbound threat traffic by 15%.</li>
+                        <li>Created and standardized 20+ incident response playbooks in collaboration with multiple teams, covering scenarios like phishing, malware, unauthorized access, and data exfiltration, reducing average incident resolution time up to 45%.</li>
+                        <li>Developed and implemented 14+ automated security workflows using Python scripts and Tines SOAR for alert triage and data enrichment, eliminating 40% of manual escalations and accelerating overall incident response times by 30%.</li>
+                        <li>Improved detection by building and tuning 30+ Splunk correlation rules aligned with MITRE ATT&CK, expanding TTP coverage and exposing previously undetected malicious activity.</li>
+                    </ul>
                 </div>
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gradient-pop shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-                    </div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-pink-400 text-sm">JAN 2020-JUNE 2020</h3>
-                        <h3 class="font-bold text-white text-lg">Cyber Security Analyst Intern</h3>
-                        <p class="text-sm font-medium text-gray-400">SSP Technology</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-2">
-                            Hardened Active Directory security, reducing unauthorized access risks by 40% and blocking 100+ unauthorized login attempts.
-                        </p>
-                    </div>
+                <div class="glass-card rounded-lg shadow-xl px-6 py-6" data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="font-bold text-pink-400 text-sm">JUNE 2020-JUNE 2021</h3>
+                    <h3 class="font-bold text-white text-xl mt-1">JavaScript Developer</h3>
+                    <p class="text-sm font-medium text-gray-400">Confiable Solutions</p>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Managed profitable client relationships by developing and maintaining websites and creating dashboards for risk scorecards for international clients using HTML, CSS, and JavaScript.</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-lg shadow-xl px-6 py-6" data-aos="zoom-in" data-aos-delay="400">
+                    <h3 class="font-bold text-pink-400 text-sm">JAN 2020-JUNE 2020</h3>
+                    <h3 class="font-bold text-white text-xl mt-1">Cyber Security Analyst Intern</h3>
+                    <p class="text-sm font-medium text-gray-400">SSP Technology</p>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Hardened Active Directory (AD) security, implementing group policy restrictions, enforcing least privilege access, and monitoring login anomalies, reducing unauthorized access risks by 40% and blocking 100+ unauthorized login attempts.</li>
+                        <li>Investigated and mitigated security incidents, analyzing Windows Event Logs, Sysmon telemetry, and SIEM alerts, detecting 30+ suspicious activities, and reducing incident resolution time by 35%.</li>
+                    </ul>
                 </div>
             </div>
         </div>

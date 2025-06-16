@@ -1,32 +1,108 @@
-    <section id="projects" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300">
-                    <div>
-                        <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">Mistral-Driven SIEM Rule Generator</h3>
-                        <p class="mt-2 text-sm text-gray-400">An AI tool using a fine-tuned Mistral model to generate SIEM detection rules from natural language prompts, supporting Splunk, SentinelOne, and Panther.</p>
+    <section id="projects" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gradient">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">Mistral-Driven SIEM Rule Generator: AI-Powered Threat Detection</h3>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Developed AI tool using Mistral model to convert natural language prompts into structured SIEM rules</li>
+                        <li>Successfully translated 100+ rules across Splunk, SentinelOne, Panther SIEM, and Wazuh platforms</li>
+                        <li>Enhanced SOC efficiency with MITRE ATT&CK mapping and automated rule validation</li>
+                    </ul>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Python</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">AI/ML</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">SIEM</span>
                     </div>
-                    <div class="mt-4">
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">View on Github &rarr;</a>
+                    <div class="mt-6 flex justify-between items-center">
+                        <a href="https://github.com/apawar9/detection-ai" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full text-sm font-medium hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105" target="_blank">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
-                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300">
-                    <div>
-                        <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">AI-Based Phishing Detection</h3>
-                        <p class="mt-2 text-sm text-gray-400">A machine learning tool to classify emails as phishing or legitimate, integrating VirusTotal for attachment scanning and Elastic for threat detection.</p>
+                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">AI-Based Phishing Detection Tool</h3>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Built ML-based tool for real-time phishing email classification using content analysis</li>
+                        <li>Implemented NLP features extraction using Python, Scikit-learn, and NLTK</li>
+                        <li>Integrated VirusTotal and Elastic for comprehensive threat detection</li>
+                    </ul>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Python</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Machine Learning</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">NLP</span>
                     </div>
-                    <div class="mt-4">
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">View on Github &rarr;</a>
+                    <div class="mt-6 flex justify-between items-center">
+                        <a href="https://github.com/apawar9/Phishing-Detection-Tool" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full text-sm font-medium hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105" target="_blank">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
-                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300">
-                    <div>
-                        <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">SOC Automation Lab</h3>
-                        <p class="mt-2 text-sm text-gray-400">A comprehensive lab integrating Wazuh (SIEM) and Shuffle (SOAR) to automate monitoring and response for events like Mimikatz detection.</p>
+                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="300">
+                    <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">Security Operations Center (SOC) Automation Lab</h3>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Integrated Wazuh SIEM with Shuffle SOAR for automated security event monitoring</li>
+                        <li>Implemented Sysmon for enhanced endpoint telemetry and threat detection</li>
+                    </ul>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">SIEM</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">SOAR</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Sysmon</span>
                     </div>
-                    <div class="mt-4">
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">View on Github &rarr;</a>
+                    <div class="mt-6 flex justify-between items-center">
+                        <a href="https://github.com/apawar9/SOC-Automation-Lab" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full text-sm font-medium hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105" target="_blank">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="100">
+                    <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">Penetration Testing on a Box</h3>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Conducted comprehensive penetration testing using John the Ripper, Hashcat, and Metasploit</li>
+                        <li>Successfully exploited vulnerabilities through SQL injection and network mapping</li>
+                        <li>Achieved root access and system information retrieval through multiple attack vectors</li>
+                    </ul>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Penetration Testing</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Metasploit</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">SQL Injection</span>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <a href="https://github.com/apawar9/Penetration-Testing-on-a-Box" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full text-sm font-medium hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105" target="_blank">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="200">
+                    <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">Active Directory Penetration Testing</h3>
+                    <ul class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-4 list-disc pl-4 space-y-2">
+                        <li>Set up virtual lab environment with domain controller and user machines</li>
+                        <li>Executed advanced AD attacks including LLMNR poisoning, SMB relay, and Kerberoasting</li>
+                    </ul>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Active Directory</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Penetration Testing</span>
+                        <span class="badge bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-xs font-medium">Security</span>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <a href="https://github.com/apawar9/Active-Directory-Penetration-Testing" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-full text-sm font-medium hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105" target="_blank">
+                            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                            </svg>
+                            View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>

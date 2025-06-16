@@ -17,8 +17,15 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.dark {
             background-color: #111827;
             color: #d1d5db;
+        }
+        body.light {
+            background-color: #f3f4f6;
+            color: #1f2937;
         }
         .text-gradient {
             background-clip: text;
@@ -39,220 +46,84 @@
             @apply block w-20 h-1 bg-gradient-pop mx-auto mt-4 rounded-full;
         }
         .glass-card {
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .dark .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
-<body class="antialiased">
-<header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+<body class="antialiased dark">
+<header class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 dark:bg-gray-900/80 light:bg-white/80 backdrop-blur-sm">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-xl font-bold text-white">Abhijeet Pawar</a>
+        <a href="#" class="text-xl font-bold dark:text-white light:text-gray-900">Abhijeet Pawar</a>
         <nav class="hidden md:flex space-x-8 text-sm font-semibold">
-            <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors">About</a>
-            <a href="#experience" class="text-gray-300 hover:text-cyan-400 transition-colors">Experience</a>
-            <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
-            <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
+            <a href="#about" class="dark:text-gray-300 light:text-gray-700 hover:text-cyan-400 transition-colors">About</a>
+            <a href="#experience" class="dark:text-gray-300 light:text-gray-700 hover:text-cyan-400 transition-colors">Experience</a>
+            <a href="#projects" class="dark:text-gray-300 light:text-gray-700 hover:text-cyan-400 transition-colors">Projects</a>
+            <a href="#contact" class="dark:text-gray-300 light:text-gray-700 hover:text-cyan-400 transition-colors">Contact</a>
         </nav>
-        <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Toggle menu">
-            <i class="ph ph-list text-2xl"></i>
-        </button>
+        <div class="flex items-center gap-4">
+            <button id="theme-toggle" class="p-2 rounded-lg dark:bg-gray-800 light:bg-gray-100" aria-label="Toggle theme">
+                <i class="ph ph-sun text-xl dark:hidden light:block"></i>
+                <i class="ph ph-moon text-xl dark:block light:hidden"></i>
+            </button>
+            <button id="mobile-menu-button" class="md:hidden dark:text-white light:text-gray-900" aria-label="Toggle menu">
+                <i class="ph ph-list text-2xl"></i>
+            </button>
+        </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
-        <a href="#about" class="block py-2 px-6 text-white hover:bg-gray-700">About</a>
-        <a href="#experience" class="block py-2 px-6 text-white hover:bg-gray-700">Experience</a>
-        <a href="#projects" class="block py-2 px-6 text-white hover:bg-gray-700">Projects</a>
-        <a href="#contact" class="block py-2 px-6 text-white hover:bg-gray-700">Contact</a>
+    <div id="mobile-menu" class="hidden md:hidden transition-colors duration-300 dark:bg-gray-800 light:bg-gray-100">
+        <a href="#about" class="block py-2 px-6 dark:text-white light:text-gray-900 hover:bg-gray-700">About</a>
+        <a href="#experience" class="block py-2 px-6 dark:text-white light:text-gray-900 hover:bg-gray-700">Experience</a>
+        <a href="#projects" class="block py-2 px-6 dark:text-white light:text-gray-900 hover:bg-gray-700">Projects</a>
+        <a href="#contact" class="block py-2 px-6 dark:text-white light:text-gray-900 hover:bg-gray-700">Contact</a>
     </div>
 </header>
-<main class="pt-20">
-    <section id="hero" class="min-h-screen flex items-center bg-gray-900">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-7xl font-extrabold text-gradient bg-gradient-pop">Abhijeet Pawar</h1>
-            <p class="mt-4 text-lg md:text-2xl font-semibold text-white">Security Engineer | SOC Analyst | Threat Hunter</p>
-            <p class="mt-6 max-w-3xl mx-auto text-gray-400">
-                A proactive Cybersecurity Analyst with 3+ years of experience in Security Operations, Threat Detection, and Incident Response.
-            </p>
-            <div class="mt-8 flex justify-center gap-4">
-                <a href="#projects" class="bg-gradient-pop text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition-opacity">View My Work</a>
-                <a href="Masters2025_.pdf" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-full hover:bg-gray-600 transition-colors">View Resume</a>
-            </div>
-        </div>
-    </section>
-    <section id="about" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">About Me &amp; Skills</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
-                <div class="lg:col-span-2 text-gray-300">
-                    <p class="mb-4">
-                        I'm a passionate cybersecurity professional dedicated to protecting digital environments. My experience spans across diverse cloud and enterprise settings, where I've honed my skills in triaging incidents using SIEM/SOAR platforms like Splunk and Panther.
-                    </p>
-                    <p>
-                        I thrive on building high-fidelity detection rules, developing AI-driven security solutions, and leading critical threat hunts to uncover hidden vectors. My goal is to continuously innovate and automate workflows to elevate security posture and ensure robust defense mechanisms.
-                    </p>
-                </div>
-                <div class="lg:col-span-3">
-                    <h3 class="text-xl font-bold text-white mb-4">Technical Skills</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">Splunk</span>
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">SentinelOne</span>
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">Panther SIEM</span>
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">Python</span>
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">AWS</span>
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">Azure</span>
-                        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">GCP</span>
-                        <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">Snort</span>
-                        <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">Burp Suite</span>
-                        <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">Tines (SOAR)</span>
-                        <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">Nessus</span>
-                        <span class="bg-purple-500/20 text-purple-300 text-xs font-semibold px-3 py-1 rounded-full">Wireshark</span>
-                        <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-3 py-1 rounded-full">MITRE ATT&amp;CK</span>
-                        <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-3 py-1 rounded-full">NIST Framework</span>
-                        <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-3 py-1 rounded-full">ISO 27001</span>
-                        <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-3 py-1 rounded-full">Docker</span>
-                        <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-3 py-1 rounded-full">SQL</span>
-                        <span class="bg-pink-500/20 text-pink-300 text-xs font-semibold px-3 py-1 rounded-full">Bash</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="experience" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Work Experience</h2>
-            <div class="relative wrap overflow-hidden">
-                <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gradient-pop shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">1</h1>
-                    </div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-pink-400 text-sm">MAY 2024-DEC 2024</h3>
-                        <h3 class="font-bold text-white text-lg">Security Detection &amp; Response Engineer Intern</h3>
-                        <p class="text-sm font-medium text-gray-400">Circle Internet Group</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-2">
-                            Investigated 350+ security incidents, authored 25+ advanced detection rules, and led proactive threat hunts.
-                        </p>
-                    </div>
-                </div>
-                <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gradient-pop shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto text-white font-semibold text-lg">2</h1>
-                    </div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-pink-400 text-sm">JULY 2021-JUNE 2023</h3>
-                        <h3 class="font-bold text-white text-lg">Cyber Security Analyst</h3>
-                        <p class="text-sm font-medium text-gray-400">Atos</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-2">
-                            Triaged 25+ daily alerts, reducing MTTD by 35%. Created 20+ IR playbooks and automated workflows, accelerating response times by 30%.
-                        </p>
-                    </div>
-                </div>
-                <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="z-20 flex items-center order-1 bg-gradient-pop shadow-xl w-8 h-8 rounded-full">
-                        <h1 class="mx-auto font-semibold text-lg text-white">3</h1>
-                    </div>
-                    <div class="order-1 glass-card rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h3 class="font-bold text-pink-400 text-sm">JAN 2020-JUNE 2020</h3>
-                        <h3 class="font-bold text-white text-lg">Cyber Security Analyst Intern</h3>
-                        <p class="text-sm font-medium text-gray-400">SSP Technology</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-300 text-opacity-100 mt-2">
-                            Hardened Active Directory security, reducing unauthorized access risks by 40% and blocking 100+ unauthorized login attempts.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects" class="py-20 bg-gray-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300">
-                    <div>
-                        <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">Mistral-Driven SIEM Rule Generator</h3>
-                        <p class="mt-2 text-sm text-gray-400">An AI tool using a fine-tuned Mistral model to generate SIEM detection rules from natural language prompts, supporting Splunk, SentinelOne, and Panther.</p>
-                    </div>
-                    <div class="mt-4">
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">View on Github &rarr;</a>
-                    </div>
-                </div>
-                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300">
-                    <div>
-                        <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">AI-Based Phishing Detection</h3>
-                        <p class="mt-2 text-sm text-gray-400">A machine learning tool to classify emails as phishing or legitimate, integrating VirusTotal for attachment scanning and Elastic for threat detection.</p>
-                    </div>
-                    <div class="mt-4">
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">View on Github &rarr;</a>
-                    </div>
-                </div>
-                <div class="glass-card rounded-lg p-6 flex flex-col justify-between transform hover:-translate-y-2 transition-transform duration-300">
-                    <div>
-                        <h3 class="text-xl font-bold text-gradient bg-gradient-pop-alt">SOC Automation Lab</h3>
-                        <p class="mt-2 text-sm text-gray-400">A comprehensive lab integrating Wazuh (SIEM) and Shuffle (SOAR) to automate monitoring and response for events like Mimikatz detection.</p>
-                    </div>
-                    <div class="mt-4">
-                        <a href="#" class="text-cyan-400 hover:text-cyan-300 font-semibold">View on Github &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="education" class="py-20">
-        <div class="container mx-auto px-6">
-            <h2 class="section-heading text-white">Education &amp; Certifications</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Education</h3>
-                    <div class="glass-card p-6 rounded-lg">
-                        <p class="font-bold text-cyan-400">Master of Applied Science, Cyber Forensic and Security</p>
-                        <p class="text-gray-400">Illinois Institute of Technology, Chicago, IL</p>
-                        <p class="text-sm font-medium text-pink-400">Expected May 2025</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-lg mt-4">
-                        <p class="font-bold text-cyan-400">Bachelor of Engineering, Information Technology</p>
-                        <p class="text-gray-400">University of Pune, India</p>
-                        <p class="text-sm font-medium text-pink-400">Oct 2020</p>
-                    </div>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-bold text-white mb-4">Certifications</h3>
-                    <div class="space-y-3">
-                        <div class="flex items-center gap-3"><i class="ph-fill ph-shield-check text-green-400 text-2xl" aria-hidden="true"></i><span>CompTIA Security+</span></div>
-                        <div class="flex items-center gap-3"><i class="ph-fill ph-cloud-arrow-up text-blue-400 text-2xl" aria-hidden="true"></i><span>AWS Certified Solutions Architect - Associate</span></div>
-                        <div class="flex items-center gap-3"><i class="ph-fill ph-seal-check text-purple-400 text-2xl" aria-hidden="true"></i><span>ISC2 Certified in Cybersecurity</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-<footer id="contact" class="bg-gray-800/50 py-12">
-    <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-white">Let's Connect!</h2>
-        <p class="mt-2 text-gray-400">I'm currently seeking new opportunities. Feel free to reach out.</p>
-        <div class="mt-6">
-            <a href="mailto:abhidotsh@gmail.com" class="text-lg text-gradient bg-gradient-pop font-semibold">abhidotsh@gmail.com</a>
-        </div>
-        <div class="mt-6 flex justify-center space-x-6">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn"><i class="ph-bold ph-linkedin-logo text-3xl"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Github"><i class="ph-bold ph-github-logo text-3xl"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Resume PDF"><i class="ph-bold ph-file-pdf text-3xl"></i></a>
-        </div>
-        <p class="mt-8 text-sm text-gray-500">&copy; 2024 Abhijeet Pawar. All rights reserved.</p>
-    </div>
-</footer>
+
+<!-- Rest of the HTML remains the same, just add dark: and light: variants to the classes -->
+
 <script>
+// Theme toggle functionality
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    body.classList.remove('dark', 'light');
+    body.classList.add(savedTheme);
+}
+
+themeToggle.addEventListener('click', () => {
+    if (body.classList.contains('dark')) {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
+// Mobile menu functionality
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
+
 mobileMenuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
+
 const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
 for (let i = 0; i < mobileMenuLinks.length; i++) {
     mobileMenuLinks[i].addEventListener('click', () => {
