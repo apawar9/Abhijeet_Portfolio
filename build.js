@@ -60,13 +60,13 @@ if (fs.existsSync(assetsDir)) {
   console.warn('assets/ directory not found, skipping copy.');
 }
 
-// 5. Copy resume PDF from public directory
-const resumePath = path.join(publicDir, 'Abhijeet_Pawar_Resume.pdf');
+// 5. Copy resume PDF from root directory
+const resumePath = path.join(__dirname, 'Abhijeet_Pawar_Resume.pdf');
 if (fs.existsSync(resumePath)) {
   fs.copyFileSync(resumePath, path.join(distDir, 'Abhijeet_Pawar_Resume.pdf'));
   console.log('Abhijeet_Pawar_Resume.pdf copied to dist/');
 } else {
-  console.warn('Abhijeet_Pawar_Resume.pdf not found in public/, skipping copy.');
+  console.warn('Abhijeet_Pawar_Resume.pdf not found in root, skipping copy.');
 }
 
 console.log('Build process completed!');
