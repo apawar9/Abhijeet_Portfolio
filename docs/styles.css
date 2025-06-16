@@ -1,0 +1,33 @@
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+
+.bg-gradient-pop {
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+}
+
+/* Name Animation - Floating Effect */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top; /* Focus on face/upper body */
+    margin-bottom: 1.5rem; /* Space below the picture */
+    border: 2px solid #4facfe; /* Optional: adjust border thickness */
+    box-shadow: 0 0 10px rgba(79, 172, 254, 0.4); /* Optional: subtle glow */
+} 
